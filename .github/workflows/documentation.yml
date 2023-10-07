@@ -19,7 +19,8 @@ jobs:
           sphinx-build docs _build
       - name: Copy docs to specified folder
         run: |
-          ls
+          ls _build
+          ls docs
           cp -a "docs/_build/html/." "docs"
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
