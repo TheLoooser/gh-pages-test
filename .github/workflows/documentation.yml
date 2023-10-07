@@ -20,6 +20,7 @@ jobs:
       - name: Copy docs to specified folder
         run: |
           ls _build
+          echo "-----"
           ls docs
           cp -a "docs/_build/html/." "docs"
       - name: Deploy to GitHub Pages
